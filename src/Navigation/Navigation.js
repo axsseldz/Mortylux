@@ -16,7 +16,7 @@ export default function Navigation() {
         options={{
           tabBarLabel: "Home",
           tabBarIcon: () => (
-            <Icon name="rocket" color="#53cc44" size={20} />
+            <Icon name="dragon" color="#6d55b1" size={20} />
           )
         }}
       />
@@ -26,7 +26,7 @@ export default function Navigation() {
         options={{
           tabBarLabel: "Favorites",
           tabBarIcon: () => (
-            <Icon name="fire" color="#53cc44" size={20} />
+            <Icon name="fire" color="#ef5350" size={20} />
           )
         }}
       />
@@ -36,7 +36,7 @@ export default function Navigation() {
         options={{
           tabBarLabel: "Profile",
           tabBarIcon: () => (
-            <Icon name="user-astronaut" color="#53cc44" size={20} />
+            <Icon name="user-astronaut" color="#77b3ff" size={20} />
           )
 
         }}
