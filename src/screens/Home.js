@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView } from "react-native";
+import CharacterList from "../components/CharacterList";
 
 async function getCharactersApi() {
   try {
@@ -24,7 +25,6 @@ export async function getCharactersDetailsByUrlApi(url) {
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
-  console.log("pokemons--->", characters);
 
   useEffect(() => {
     (async () => {
@@ -45,7 +45,7 @@ export default function Home() {
           name: characterDetails.name,
           type: characterDetails.types[0].type.name,
           order: characterDetails.order,
-          imagen:
+          image:
             characterDetails.sprites.other["official-artwork"].front_default,
         });
       }
@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <SafeAreaView>
-      <Text>Home</Text>
+      <CharacterList characters={characters} />
     </SafeAreaView>
   );
 }
