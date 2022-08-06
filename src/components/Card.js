@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableWithoutFeedback } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 export default function Card(props) {
   const { character } = props;
+  const navigation = useNavigation();
 
   const POKEMON_TYPE_COLORS = {
     normal: "#A8A878",
@@ -32,7 +34,7 @@ export default function Card(props) {
   const background = { backgroundColor: Color, ...styles.backgroundStyles };
 
   const goToTheCharacter = () => {
-    console.log(`go to the character ${character.name}`)
+    navigation.navigate("Character", { id: character.id });
 
   }
 
