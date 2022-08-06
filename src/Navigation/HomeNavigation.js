@@ -12,7 +12,10 @@ export default function HomeNavigation() {
         name="Home"
         component={Home}
         options={{ title: "", headerTransparent: true }} />
-      <Stack.Screen name="Character" component={Character} />
+      <Stack.Screen
+        name="Character"
+        component={Character}
+        options={{ title: "", headerTransparent: true }} />
     </Stack.Navigator>
   )
 } 
