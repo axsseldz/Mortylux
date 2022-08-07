@@ -1,15 +1,17 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { addCharacterFavoriteApi, } from "../../data/favorite";
 
 export default function Favorites(props) {
   const { id } = props;
 
-  const addFavorites = () => {
-    console.log("add to favorites", id);
+  const addFavorites = async () => {
+    await addCharacterFavoriteApi(id);
   };
 
   return (
+
     <Icon
       name="heart"
       color="#35363a"
@@ -17,5 +19,6 @@ export default function Favorites(props) {
       onPress={addFavorites}
       style={{ marginRight: 20 }}
     />
+
   )
 }
