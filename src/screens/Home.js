@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native";
 import CharacterList from "../components/CharacterList";
 
+
 async function getCharactersApi() {
   try {
     const url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
