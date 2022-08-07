@@ -22,3 +22,12 @@ export async function addCharacterFavoriteApi(id) {
     throw error;
   }
 }
+
+export async function isCharacterFavoriteApi(id) {
+  try {
+    const response = await getCharactersFavoriteApi();
+    return includes(response, id);
+  } catch (error) {
+    throw error;
+  }
+}
