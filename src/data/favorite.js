@@ -31,3 +31,14 @@ export async function isCharacterFavoriteApi(id) {
     throw error;
   }
 }
+
+
+export async function removeCharacterFavoriteApi(id) {
+  try {
+    const favorites = await getCharactersFavoriteApi();
+    const newFavorites = pull(favorites, id);
+    await AsyncStorage.setItem(FAVORITE_STORAGE, JSON.stringify(newFavorites));
+  } catch (error) {
+    throw error;
+  }
+}

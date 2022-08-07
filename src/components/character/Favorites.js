@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { addCharacterFavoriteApi, isCharacterFavoriteApi } from "../../data/favorite";
+import { addCharacterFavoriteApi, isCharacterFavoriteApi, removeCharacterFavoriteApi } from "../../data/favorite";
 
 export default function Favorites(props) {
   const { id } = props;
@@ -34,8 +34,13 @@ export default function Favorites(props) {
     }
   };
 
-  const removeCharacter = () => {
-    console.log("remove from favorites");
+  const removeCharacter = async () => {
+    try {
+      await removeCharacterFavoriteApi(id);
+      reloadCheckFavorite();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
