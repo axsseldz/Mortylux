@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import Header from '../components/character/Header';
 import Kind from '../components/character/Kind';
 import Stats from '../components/character/Stats';
+import Favorites from '../components/character/Favorites';
+import useAuth from "../hooks/useAuth";
 
 export default function Character(props) {
 
@@ -25,9 +27,11 @@ export default function Character(props) {
 
   const [character, setCharacter] = useState(null);
 
+  const { auth } = useAuth();
+
   useEffect(() => {
     navigation.setOptions({
-      headerRight: () => null,
+      headerRight: () => (auth ? <Favorites id={character?.id} /> : undefined),
       headerLeft: () => (
         <Icon
           name='arrow-left'
@@ -38,7 +42,7 @@ export default function Character(props) {
         />
       ),
     });
-  }, [navigation, params]);
+  }, [navigation, params, auth, character]);
 
   useEffect(() => {
     (async () => {
