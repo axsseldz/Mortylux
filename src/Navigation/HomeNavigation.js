@@ -18,4 +18,5 @@ export default function HomeNavigation() {
         options={{ title: "", headerTransparent: true }} />
     </Stack.Navigator>
   )
-} 
+}
+

@@ -68,12 +68,12 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   name: {
-    color: "#f0f6f7",
+    color: "#424449",
     fontWeight: "bold",
     fontSize: 27,
   },
   order: {
-    color: "#f0f6f7",
+    color: "#424449",
     fontWeight: "bold",
   },
   contentImage: {

@@ -74,8 +74,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   fillBar: {
-    //backgroundColor: "red",
-    //width: "40%",
     height: 5,
     borderRadius: 20,
   }

@@ -46,7 +46,7 @@ export default function Favorites(props) {
   return (
     <Icon
       name="heart"
-      color="#35363a"
+      color="#fc1515"
       size={20}
       onPress={isFavorite ? removeCharacter : addFavorites}
       style={{ marginRight: 20 }}

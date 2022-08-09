@@ -35,7 +35,7 @@ export default function Character(props) {
       headerLeft: () => (
         <Icon
           name='arrow-left'
-          color='#fff'
+          color='black'
           size={20}
           style={{ marginLeft: 20 }}
           onPress={navigation.goBack}
