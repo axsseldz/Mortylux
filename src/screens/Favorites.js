@@ -4,6 +4,7 @@ import { useFocusEffect } from "@react-navigation/native";
 import useAuth from "../hooks/useAuth";
 import { getCharactersFavoriteApi } from "../data/favorite";
 import CharacterList from "../components/CharacterList";
+import NotLogged from "../components/NotLogged";
 
 export default function Favorite() {
   const [characters, setCharacters] = useState([]);
@@ -50,7 +51,7 @@ export default function Favorite() {
 
 
   return !auth ? (
-    <Text>usuario no logeado</Text>
+    <NotLogged />
   ) : (
     <CharacterList characters={characters} />
   );
