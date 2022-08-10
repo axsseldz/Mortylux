@@ -13,18 +13,18 @@ Species is a multi-platform application developed with React Native using the po
 <img src="/images/home/home.jpg" height="600"> 
 <img src="/images/home/pokemon.jpg" height="600"> 
 
-
-
 • Favorites
     this screen shows each Pokemon that the user has sent to "favorites", but if you have not yet logged in it will show you a message warning you that you have not logged in and redirect you to the Profile screen to log in.
 
-![favorites]()
+<img src="/images/favorites/warning.jpg" height="600"> 
+<img src="/images/favorites/favorites.jpg" height="600"> 
 
 
 • Log In
     On this screen, the form to log in will be shown, once the session is started the predetermined data will be shown and the number of favorite Pokemons that are available.
 
-![login]()
+<img src="/images/profile/login.jpg" height="600"> 
+<img src="/images/profile/profile.jpg" height="600"> 
 
 
 
