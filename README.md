@@ -10,7 +10,7 @@ Species is a multi-platform application developed with React Native using the po
 • Home
     the first page is the one that shows all the Pokemons and there is another screen where each Pokemon is shown with its characteristics, in this screen the user can press the heart button to send the Pokemon to Favorites screen, but if the user has not logged in the icon will not be shown.
 
-<img src="/images/home/home.jpg" height="600">  
+         <img src="/images/home/home.jpg" height="600">  
 
 
 • Favorites
